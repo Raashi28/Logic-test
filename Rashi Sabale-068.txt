@@ -1,0 +1,143 @@
+Q1. Accept a number from user - if it is divisible by 3 print “fun” , if it is divisible 
+by 7 print “buzz” 
+and if it is divisible by both(3,7) print “fun -buzz” . [ Two answer] 
+
+solution---
+	package test;
+
+public class DivisibilityCheck {
+	public static void div_check(int n) {
+		int n1 = 0;
+		n=n1;
+		if(n1 % 3==0 && n1 % 7==0)
+			System.out.println("fun-buzz");
+		else if(n1 % 3==0)
+			System.out.println("fun");
+		else if(n1 % 7==0)
+			System.out.println("buzz");
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		DivisibilityCheck.div_check(15);
+
+	}
+
+}
+
+Q2. Accept a start number from user and end number from user. Print all  odd 
+number between start and end number. [ Two Answer]
+
+solution--
+	package test;
+import static java.lang.System.out;
+public class OddCheck {
+	
+	public static void oddrange(int s, int e) {
+		boolean bool=isodd(s);
+
+	if (bool==false)
+		s=s+1;
+	for(int i=s;i<=e;i=i+2) 
+	{
+		out.print(" "+i);
+	}
+	}
+	
+	private static boolean isodd(int n) {
+		return n % 2 !=0;
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		OddCheck.oddrange(2, 25);
+	}
+
+}
+
+Q3. Accept a number from user and check if it is palindrome number or not eg 
+(121) 
+
+solution--
+package test;
+
+public class Palindrome_Check {
+ 
+	public static boolean main(int no) {
+		// TODO Auto-generated method stub
+		int r,n,rev=0;
+		n=no;
+		while(no!=0) {
+			r=no%10;
+			rev=rev*10+r;
+			no=no/10;
+			
+		}
+		if(rev==n)
+			return true;
+		return false;
+
+	}
+
+}
+
+Que3] Accept a term from the user and print Fibonacci series
+package logic;
+import static java.lang.System.out;
+public class FibonacciLogic {
+
+	public static void fib(int s) {
+		// TODO Auto-generated method stub
+	int a,b,c;
+	a=0;
+	b=1;
+	
+	out.print(a+" "+b);
+	if(s>2) {
+		for(int i=1; i<=2;i++) {
+			c=a+b;
+			out.print(" "+c);
+			a=b;
+			b=c;
+		}
+	}
+	
+	
+
+	}
+	public static void main(String[] args) {
+		FibonacciLogic.fib(5);
+	}
+
+}
+
+Que4] Accept start no and end no and print all odd no between them
+package test;
+import static java.lang.System.out;
+
+public class OddLogic {
+
+	public static void oddrange(int s,int e) {
+		boolean b=isodd(s);
+		if(b==false)
+			s=s+1;
+		for (int i=s;i<=e;i=i+2) {
+			out.print(i);
+		}
+	}
+	private static boolean isodd(int n) {
+		// TODO Auto-generated method stub
+		return n%2 !=0;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		OddLogic.oddrange(1,20);
+
+	}
+
+}
+
+	
